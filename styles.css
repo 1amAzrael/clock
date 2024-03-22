@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+    height: 100vh;
+    background: url("https://wallpapers.com/images/featured/4k-moon-pictures-cval4u1dyiy223ch.jpg");
+    background-size: cover;
+}
+
+
+
+
+.clock{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+
+
+.number{
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 20px;
+    font-size: 40px;
+    color: #0ef;
+    text-shadow: 0 0 10px #0ef;
+}
+
+.number b {
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+}
+
+.center-dot{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    
+}
+
+.hour-hand, .minute-hand, .second-hand{
+    --rotate: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+    transform-origin: bottom;
+}
+
+.hour-hand{
+    width: 12px;
+    height: 130px;
+    background-color: #0ef; 
+}
+
+.minute-hand{
+    width: 12px;
+    height: 190px;
+    background-color: #0ef; 
+}
+
+.second-hand{
+    width: 6px;
+    height: 210px;
+    background-color: white; 
+}
+
+
+
+            
